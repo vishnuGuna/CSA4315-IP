@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Game Categories</title>
+  </head>
+<body>
+    <h1>Game Categories</h1>
+    <ul>
+        <li class="category">
+            <strong>Action</strong>
+            <ol>
+                <li>Call of Duty</li>
+                <li>Fortnite</li>
+                <li>Assassin's Creed</li>
+                <li>GTA V</li>
+            </ol>
+        </li>
+        <li class="category">
+            <strong>Adventure</strong>
+            <ol>
+                <li>Uncharted</li>
+                <li>The Legend of Zelda</li>
+                <li>Hollow Knight</li>
+                <li>Red Dead Redemption</li>
+            </ol>
+        </li>
+        <li class="category">
+            <strong>Sports</strong>
+            <ol>
+                <li>FIFA</li>
+                <li>NBA 2K</li>
+                <li>Madden NFL</li>
+                <li>WWE 2K</li>
+            </ol>
+        </li>
+        <li class="category">
+            <strong>Racing</strong>
+            <ol>
+                <li>Need for Speed</li>
+                <li>Forza Horizon</li>
+                <li>Gran Turismo</li>
+                <li>Mario Kart</li>
+            </ol>
+        </li>
+        <li class="category">
+            <strong>Puzzle</strong>
+            <ol>
+                <li>Tetris</li>
+                <li>Candy Crush</li>
+                <li>Portal</li>
+                <li>Sudoku</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>
