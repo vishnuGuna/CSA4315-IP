@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRide - Vehicle Rental Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0044cc;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 15px;
+        }
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #003399;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0044cc;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RentRide</h1>
+    <p>Your one-stop solution for vehicle rentals!</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#search-vehicle">Search Vehicle</a>
+    <a href="#user-section">User</a>
+    <a href="#admin-section">Admin</a>
+    <a href="#contact-us">Contact Us</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to RentRide</h2>
+    <p>Find and book vehicles easily with our seamless rental platform. Browse cars, trucks, SUVs, and more at affordable prices.</p>
+</section>
+
+<section id="search-vehicle">
+    <div class="form-container">
+        <h2>Search Vehicles</h2>
+        <form>
+            <label for="vehicle-type">Vehicle Type</label>
+            <select id="vehicle-type">
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="suv">SUV</option>
+            </select>
+            
+            <label for="location">Pickup Location</label>
+            <input type="text" id="location" placeholder="Enter location" required>
+            
+            <label for="rental-duration">Rental Duration (days)</label>
+            <input type="number" id="rental-duration" placeholder="Enter number of days" required>
+            
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</section>
+
+<section id="user-section">
+    <h2>User Section</h2>
+    <div class="form-container">
+        <h3>Register</h3>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div class="form-container">
+        <h3>Login</h3>
+        <form>
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Enter your email" required>
+            
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</section>
+
+<section id="admin-section">
+    <h2>Admin Section</h2>
+    <div class="form-container">
+        <h3>Add Vehicle</h3>
+        <form>
+            <label for="vehicle-name">Vehicle Name</label>
+            <input type="text" id="vehicle-name" placeholder="Enter vehicle name" required>
+            
+            <label for="vehicle-type-admin">Vehicle Type</label>
+            <select id="vehicle-type-admin">
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="suv">SUV</option>
+            </select>
+            
+            <label for="vehicle-price">Price per day</label>
+            <input type="number" id="vehicle-price" placeholder="Enter price" required>
+            
+            <button type="submit">Add Vehicle</button>
+        </form>
+    </div>
+    <div class="form-container">
+        <h3>Manage Bookings</h3>
+        <p>View and approve user bookings here.</p>
+        <button>View Bookings</button>
+    </div>
+</section>
+
+<section id="contact-us">
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" placeholder="Enter your name" required>
+            
+            <label for="contact-email">Your Email</label>
+            <input type="email" id="contact-email" placeholder="Enter your email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter your message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 RentRide. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

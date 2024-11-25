@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            background: #e7f3e7;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #c1e2c1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Income Tax Calculator</h2>
+    <form id="taxForm">
+        <label for="grossPay">Monthly Gross Pay (₹):</label>
+        <input type="number" id="grossPay" required>
+
+        <label for="hra">Monthly House Rent Allowance (₹):</label>
+        <input type="number" id="hra" required>
+
+        <label for="pension">Monthly Pension Contribution (₹):</label>
+        <input type="number" id="pension" required>
+
+        <label for="healthInsurance">Monthly Health Insurance Premium (₹):</label>
+        <input type="number" id="healthInsurance" required>
+
+        <button type="button" onclick="calculateTax()">Calculate Tax</button>
+    </form>
+
+    <div id="result" class="result" style="display: none;">
+        <h3>Tax Calculation Result:</h3>
+        <p id="netTaxable"></p>
+        <p id="taxLiability"></p>
+    </div>
+
+    <script>
+        function calculateTax() {
+            const grossPay = parseFloat(document.getElementById('grossPay').value) || 0;
+            const hra = parseFloat(document.getElementById('hra').value) || 0;
+            const pension = parseFloat(document.getElementById('pension').value) || 0;
+            const healthInsurance = parseFloat(document.getElementById('healthInsurance').value) || 0;
+
+            const annualGross = grossPay * 12;
+            const annualHRA = hra * 12;
+            const annualPension = Math.min(pension * 12, 150000);
+            const annualHealthInsurance = healthInsurance * 12;
+
+            const standardDeduction = 50000;
+            const netTaxableIncome = annualGross - annualHRA - standardDeduction - annualPension - annualHealthInsurance;
+
+            let taxLiability = 0;
+            if (netTaxableIncome > 500000) {
+                if (netTaxableIncome <= 1000000) {
+                    taxLiability = 12500 + 0.2 * (netTaxableIncome - 500000);
+                } else {
+                    taxLiability = 112500 + 0.3 * (netTaxableIncome - 1000000);
+                }
+            } else if (netTaxableIncome > 250000) {
+                taxLiability = 0.05 * (netTaxableIncome - 250000);
+            }
+
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('netTaxable').innerText = Net Taxable Income: ₹${netTaxableIncome.toFixed(2)};
+            document.getElementById('taxLiability').innerText = Total Tax Liability: ₹${taxLiability.toFixed(2)};
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect | Online Learning Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .form-container h2 {
+            margin-bottom: 15px;
+        }
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>EduConnect</h1>
+    <p>Interactive and Flexible Learning Experiences</p>
+</header>
+
+<nav>
+    <a href="#student-registration">Student Registration</a>
+    <a href="#teacher-registration">Teacher Registration</a>
+    <a href="#subject-allocation">Subject Allocation</a>
+    <a href="#time-management">Time Management</a>
+</nav>
+
+<section id="student-registration">
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <form>
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" placeholder="Enter your full name" required>
+            
+            <label for="student-email">Email</label>
+            <input type="email" id="student-email" placeholder="Enter your email" required>
+            
+            <label for="student-password">Password</label>
+            <input type="password" id="student-password" placeholder="Enter your password" required>
+            
+            <label for="student-courses">Courses of Interest</label>
+            <select id="student-courses" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="programming">Programming</option>
+            </select>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</section>
+
+<section id="teacher-registration">
+    <div class="form-container">
+        <h2>Teacher Registration</h2>
+        <form>
+            <label for="teacher-name">Full Name</label>
+            <input type="text" id="teacher-name" placeholder="Enter your full name" required>
+            
+            <label for="teacher-email">Email</label>
+            <input type="email" id="teacher-email" placeholder="Enter your email" required>
+            
+            <label for="teacher-password">Password</label>
+            <input type="password" id="teacher-password" placeholder="Enter your password" required>
+            
+            <label for="subjects-taught">Subjects Taught</label>
+            <input type="text" id="subjects-taught" placeholder="Enter subjects you can teach" required>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</section>
+
+<section id="subject-allocation">
+    <div class="form-container">
+        <h2>Subject Allocation</h2>
+        <form>
+            <label for="student-select">Select Student</label>
+            <select id="student-select" required>
+                <option value="" disabled selected>Select a student</option>
+                <option value="student1">Student 1</option>
+                <option value="student2">Student 2</option>
+            </select>
+            
+            <label for="subject-select">Allocate Subject</label>
+            <select id="subject-select" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="programming">Programming</option>
+            </select>
+            
+            <button type="submit">Allocate</button>
+        </form>
+    </div>
+</section>
+
+<section id="time-management">
+    <div class="form-container">
+        <h2>Time Management</h2>
+        <form>
+            <label for="class-date">Class Date</label>
+            <input type="date" id="class-date" required>
+            
+            <label for="class-time">Class Time</label>
+            <input type="time" id="class-time" required>
+            
+            <label for="class-duration">Duration (in hours)</label>
+            <input type="number" id="class-duration" placeholder="Enter duration in hours" required>
+            
+            <button type="submit">Schedule Class</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 EduConnect. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

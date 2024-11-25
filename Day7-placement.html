@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Placement Examination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .btn-secondary {
+            background-color: #007bff;
+        }
+        .btn-secondary:hover {
+            background-color: #0056b3;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Online Placement Examination</h1>
+</header>
+
+<div class="container">
+    <h2>Admin Dashboard</h2>
+    <button class="btn" onclick="alert('Login rights provided to candidates!')">Provide Login Rights</button>
+    <button class="btn-secondary" onclick="alert('Exam Scheduled!')">Schedule Exam</button>
+    <button class="btn" onclick="alert('Questions Loaded Successfully!')">Load Questions</button>
+    <button class="btn-secondary" onclick="alert('Results Published!')">Publish Results</button>
+</div>
+
+<div class="container">
+    <h2>Candidate Dashboard</h2>
+    <button class="btn" onclick="alert('Login Successful!')">Login</button>
+    <button class="btn-secondary" onclick="alert('Exam Started! Good Luck!')">Start Exam</button>
+    <button class="btn" onclick="alert('Results Displayed!')">View Result</button>
+</div>
+
+<div class="container">
+    <h2>Apply for Re-evaluation</h2>
+    <form>
+        <label for="candidateId">Candidate ID:</label>
+        <input type="text" id="candidateId" placeholder="Enter your ID" required>
+        
+        <label for="comments">Comments or Requests:</label>
+        <textarea id="comments" rows="4" placeholder="Enter your request for re-evaluation" required></textarea>
+        
+        <button type="submit" class="btn">Submit Re-evaluation Request</button>
+    </form>
+</div>
+
+</body>
+</html>

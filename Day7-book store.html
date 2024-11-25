@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven | Online Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #444;
+            color: white;
+            padding: 10px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            gap: 15px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .carousel img {
+            width: 200px;
+            height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            text-align: center;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BookHaven</h1>
+    <p>Your Gateway to Literary Wonders</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#privacy">Privacy Policy</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to BookHaven</h2>
+    <p>Explore bestsellers, new arrivals, and curated collections for every book lover.</p>
+    <div class="carousel">
+        <img src="bestseller1.jpg" alt="Bestseller Book 1">
+        <img src="bestseller2.jpg" alt="Bestseller Book 2">
+        <img src="newarrival1.jpg" alt="New Arrival 1">
+        <img src="newarrival2.jpg" alt="New Arrival 2">
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>At BookHaven, we are passionate about connecting readers with the books they love. Founded in 2020, we strive to provide a seamless shopping experience while promoting the joy of reading. Our dedicated team works tirelessly to curate the best books for you.</p>
+</section>
+
+<section id="catalog">
+    <h2>Our Catalog</h2>
+    <div class="grid">
+        <div class="grid-item">
+            <img src="fiction.jpg" alt="Fiction">
+            <h3>Fiction</h3>
+            <p>Dive into stories that captivate your imagination.</p>
+        </div>
+        <div class="grid-item">
+            <img src="nonfiction.jpg" alt="Non-Fiction">
+            <h3>Non-Fiction</h3>
+            <p>Expand your knowledge and understanding of the world.</p>
+        </div>
+        <div class="grid-item">
+            <img src="academic.jpg" alt="Academic">
+            <h3>Academic</h3>
+            <p>Resources for students and professionals alike.</p>
+        </div>
+        <div class="grid-item">
+            <img src="mystery.jpg" alt="Mystery">
+            <h3>Mystery</h3>
+            <p>Unravel thrilling tales full of suspense.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? We're here to help!</p>
+    <p><strong>Email:</strong> support@bookhaven.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <label for="message">Your Message:</label>
+        <textarea id="message" rows="4" placeholder="Enter your message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section id="faqs">
+    <h2>FAQs</h2>
+    <p><strong>Q:</strong> How long does shipping take?<br><strong>A:</strong> Shipping typically takes 3-7 business days.</p>
+    <p><strong>Q:</strong> What is the return policy?<br><strong>A:</strong> Returns are accepted within 14 days of delivery.</p>
+</section>
+
+<section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>We value your privacy and are committed to protecting your personal information. Read more about our privacy practices <a href="#">here</a>.</p>
+</section>
+
+<footer>
+    <p>© 2024 BookHaven. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
